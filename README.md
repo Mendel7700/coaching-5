@@ -40,10 +40,17 @@ servi tel quel comme site statique.
 
 ## Médias
 
-Les visuels sont des placeholders (compositions en dégradés). Les libellés ne
-sont plus affichés à l'écran : chaque bloc est repérable par un commentaire HTML
-`<!-- Placeholder visuel — remplacer par la vraie photo : ... -->` et/ou un
-attribut `data-media` (ex. `dina-portrait-main`, `hero-family-atmosphere-video`).
+Les vraies photos de Dina et Tsipora sont intégrées (`assets/img/`, optimisées
+pour le web) : hero accueil (`dina-hero.webp`), portrait (`dina-portrait.jpg`),
+bibliothèque (`dina-bibliotheque.jpg`), Tsipora (`tsipora.jpg`). Les sources
+originales restent dans `Public/photos-a-ajouter/`.
+
+Quelques blocs d'ambiance (cuisine, carnet, pièce de consultation, courbe
+Shefer) restent des compositions en dégradés, repérables par leurs classes
+`scene-*` — remplaçables par des photos de détails du lieu (voir V6-direction.md).
+
+Note : `dina-hero.webp` ne fait que 473 px de large — suffisant mais un peu
+juste sur écran Retina. À remplacer par une version plus grande si disponible.
 
 ## Formulaire de contact
 
