@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO : remplacer coaching-5.vercel.app par le domaine définitif -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://coaching-5.vercel.app/</loc></url>
+  <url><loc>https://coaching-5.vercel.app/accompagnement.html</loc></url>
+  <url><loc>https://coaching-5.vercel.app/approche-shefer.html</loc></url>
+  <url><loc>https://coaching-5.vercel.app/valeurs-juives.html</loc></url>
+  <url><loc>https://coaching-5.vercel.app/dina-nejar.html</loc></url>
+  <url><loc>https://coaching-5.vercel.app/faq.html</loc></url>
+  <url><loc>https://coaching-5.vercel.app/contact.html</loc></url>
+</urlset>

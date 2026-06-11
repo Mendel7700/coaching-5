@@ -106,23 +106,68 @@
     });
   });
 
-  /* ---------- Contact form (front-end confirmation only) ---------- */
+  /* ---------- Contact form ----------
+     Envoi réel via fetch vers l'endpoint défini dans l'attribut action
+     (ex. Formspree). Si l'action contient encore "VOTRE_ID", l'endpoint
+     n'est PAS configuré : le formulaire est bloqué (bouton désactivé,
+     notice visible) et aucun message de succès ne peut s'afficher. */
   var form = document.querySelector('.form');
   if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      var success = document.querySelector('.form__success');
-      form.querySelectorAll('input,textarea,select,button').forEach(function (el) {
-        el.setAttribute('disabled', 'disabled');
+    var success = form.querySelector('.form__success');
+    var errorBox = form.querySelector('.form__error');
+    var notice = form.querySelector('.form__notice');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var endpoint = form.getAttribute('action') || '';
+    var isConfigured = endpoint.indexOf('http') === 0 && endpoint.indexOf('VOTRE_ID') === -1;
+
+    if (!isConfigured) {
+      /* Configuration manquante : envoi impossible, jamais de faux succès. */
+      if (submitBtn) submitBtn.setAttribute('disabled', 'disabled');
+      if (notice) notice.removeAttribute('hidden');
+      form.addEventListener('submit', function (e) { e.preventDefault(); });
+    } else {
+      if (notice) notice.setAttribute('hidden', 'hidden');
+
+      var setDisabled = function (disabled) {
+        form.querySelectorAll('input,textarea,select,button').forEach(function (el) {
+          if (disabled) el.setAttribute('disabled', 'disabled');
+          else el.removeAttribute('disabled');
+        });
+      };
+      var showSuccess = function () {
+        setDisabled(true);
+        if (errorBox) errorBox.classList.remove('is-visible');
+        if (success) {
+          success.classList.add('is-visible');
+          success.setAttribute('tabindex', '-1');
+          success.focus();
+          success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+        }
+      };
+      var showError = function () {
+        setDisabled(false);
+        if (errorBox) {
+          errorBox.classList.add('is-visible');
+          errorBox.setAttribute('tabindex', '-1');
+          errorBox.focus();
+        }
+      };
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        setDisabled(true);
+        fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          /* Succès uniquement sur réponse HTTP réellement positive */
+          if (res.ok) showSuccess();
+          else showError();
+        }).catch(showError);
       });
-      if (success) {
-        success.classList.add('is-visible');
-        success.setAttribute('tabindex', '-1');
-        success.focus();
-        success.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
-      }
-    });
+    }
   }
 
   /* ---------- Footer year ---------- */

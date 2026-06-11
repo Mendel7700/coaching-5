@@ -40,6 +40,31 @@ servi tel quel comme site statique.
 
 ## Médias
 
-Les visuels sont des placeholders premium identifiés par un libellé visible
-(ex. `dina-portrait-main`, `hero-family-atmosphere-video`). Pour les remplacer
-par de vraies images/vidéos, repérer le bloc portant l'identifiant correspondant.
+Les visuels sont des placeholders (compositions en dégradés). Les libellés ne
+sont plus affichés à l'écran : chaque bloc est repérable par un commentaire HTML
+`<!-- Placeholder visuel — remplacer par la vraie photo : ... -->` et/ou un
+attribut `data-media` (ex. `dina-portrait-main`, `hero-family-atmosphere-video`).
+
+## Formulaire de contact
+
+⚠️ **Le formulaire est BLOQUÉ tant que l'endpoint n'est pas configuré.**
+Tant que l'attribut `action` de `contact.html` contient `VOTRE_ID`, le bouton
+d'envoi est désactivé et une notice « formulaire pas encore en service »
+s'affiche. Aucun message de succès ne peut apparaître sans une réponse HTTP
+positive de l'endpoint.
+
+**Pour l'activer** : créer un formulaire sur [Formspree](https://formspree.io)
+(gratuit) et remplacer `VOTRE_ID` dans l'action du `<form>`. Compléter aussi le
+téléphone/email dans la notice `.form__notice`.
+
+## À confirmer avant mise en ligne
+
+- Domaine : `https://coaching-5.vercel.app` **confirmé** (canonical / og:url /
+  sitemap / robots déjà alignés). À mettre à jour partout si un domaine
+  personnalisé est ajouté plus tard.
+- **Canal de contact actuel : téléphone uniquement** (06 27 17 50 59, affiché
+  sur la page Contact — notice + aside — et dans le footer de toutes les pages).
+  Le formulaire reste bloqué (bouton désactivé + notice) tant que `VOTRE_ID`
+  n'est pas remplacé par un identifiant Formspree réel dans `contact.html`.
+  Aucun email de contact n'est disponible à ce jour.
+- Remplacer les placeholders visuels par de vraies photos.

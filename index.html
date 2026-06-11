@@ -5,9 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coaching parental à Yerres — Dina Nejar, accompagnement parental et familial</title>
   <meta name="description" content="Dina Nejar, accompagnante parentale et familiale à Yerres et à distance. Formée au coaching parental auprès d’Ella Mahut et spécialisée dans l’approche Shefer. Premier échange gratuit et confidentiel." />
+  <!-- TODO : confirmer le domaine définitif (canonical + og:url) -->
+  <link rel="canonical" href="https://coaching-5.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Dina Nejar — Accompagnement parental et familial" />
+  <meta property="og:title" content="Coaching parental à Yerres — Dina Nejar" />
+  <meta property="og:description" content="Accompagnement parental et familial à Yerres et à distance. Approche Shefer. Premier échange gratuit et confidentiel." />
+  <meta property="og:url" content="https://coaching-5.vercel.app/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232E3B30'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='24' fill='%23F6EEE0'%3EDN%3C/text%3E%3C/svg%3E" />
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Dina Nejar — Accompagnement parental et familial",
+    "description": "Accompagnement parental et familial à Yerres (Essonne) et à distance. Approche Shefer, premier échange gratuit et confidentiel.",
+    "url": "https://coaching-5.vercel.app/",
+    "areaServed": ["Yerres", "Essonne", "France (à distance)"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Yerres", "addressRegion": "Essonne", "addressCountry": "FR" }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -22,11 +44,12 @@
           <span class="brand__role">Accompagnement parental et familial</span>
         </span>
       </a>
-      <nav class="nav" aria-label="Navigation principale">
+      <nav class="nav" id="primary-nav" aria-label="Navigation principale">
         <a class="navlink" href="accompagnement.html">Accompagnement</a>
         <a class="navlink" href="approche-shefer.html">Approche Shefer</a>
         <a class="navlink" href="valeurs-juives.html">Valeurs juives</a>
         <a class="navlink" href="dina-nejar.html">Dina Nejar</a>
+        <a class="navlink" href="faq.html">FAQ</a>
         <a class="navlink" href="contact.html">Contact</a>
         <a class="btn btn--solid header-cta" href="contact.html">Premier échange <span class="arrow">&rarr;</span></a>
       </nav>
@@ -45,7 +68,7 @@
         <div class="hero__grid">
           <div class="hero__content">
             <span class="eyebrow" data-reveal>Accompagnement parental et familial · Yerres &amp; à distance</span>
-            <h1 class="hero__title" data-reveal style="--d:80ms">Quand la relation avec son enfant devient un lieu de tension, il faut parfois un espace pour y revoir clair.</h1>
+            <h1 class="hero__title" data-reveal style="--d:80ms">Retrouver une relation plus apaisée avec votre enfant.</h1>
             <p class="lead hero__sub" data-reveal style="--d:160ms">Dina Nejar accompagne les parents et les familles lorsque les conflits se répètent, que l’autorité vacille ou que le lien devient difficile à retrouver.</p>
             <div class="hero__actions" data-reveal style="--d:240ms">
               <a class="btn btn--solid" href="contact.html">Demander un premier échange <span class="arrow">&rarr;</span></a>
@@ -56,11 +79,11 @@
             </p>
           </div>
           <div class="hero__media" data-reveal="image">
-            <figure class="media media--hero" data-parallax="0.06">
+            <!-- Placeholder visuel — remplacer par la vraie photo/vidéo : hero-family-atmosphere-video -->
+            <figure class="media media--hero" data-parallax="0.06" data-media="hero-family-atmosphere-video">
               <div class="media__scene scene-kitchen is-video"></div>
               <div class="media__grain"></div>
               <div class="media__vignette"></div>
-              <figcaption class="media__caption">hero-family-atmosphere-video</figcaption>
             </figure>
           </div>
         </div>
@@ -140,7 +163,6 @@
                 </svg>
               </div>
               <div class="media__grain"></div>
-              <figcaption class="media__caption">shefer-approach-visual</figcaption>
             </figure>
             <div class="approach__body">
               <h3>L’approche Shefer</h3>
@@ -150,10 +172,10 @@
           </article>
           <article class="approach__card" data-reveal style="--d:140ms">
             <figure class="media media--wide">
+              <!-- Placeholder visuel — remplacer par la vraie photo : jewish-values-detail -->
               <div class="media__scene scene-values"><div class="media__page"></div></div>
               <div class="media__grain"></div>
               <div class="media__vignette"></div>
-              <figcaption class="media__caption">jewish-values-detail</figcaption>
             </figure>
             <div class="approach__body">
               <h3>Coaching et valeurs juives</h3>
@@ -176,11 +198,11 @@
             <a class="tlink" href="dina-nejar.html" data-reveal style="--d:240ms">Découvrir Dina <span class="arrow">&rarr;</span></a>
           </div>
           <div class="split__media" data-reveal="image">
-            <figure class="media media--portrait" data-parallax="0.05">
+            <!-- Placeholder visuel — remplacer par la vraie photo : dina-portrait-main -->
+            <figure class="media media--portrait" data-parallax="0.05" data-media="dina-portrait-main">
               <div class="media__scene scene-portrait"></div>
               <div class="media__grain"></div>
               <div class="media__vignette"></div>
-              <figcaption class="media__caption">dina-portrait-main</figcaption>
             </figure>
           </div>
         </div>
@@ -194,10 +216,10 @@
         <div class="presences mt-m">
           <div class="presence" data-reveal>
             <figure class="media media--wide" style="margin-bottom:1.6rem" data-reveal="image">
+              <!-- Placeholder visuel — remplacer par la vraie photo : dina-office-portrait -->
               <div class="media__scene scene-office"><div class="media__books"></div></div>
               <div class="media__grain"></div>
               <div class="media__vignette"></div>
-              <figcaption class="media__caption">dina-office-portrait</figcaption>
             </figure>
             <span class="presence__role">Accompagnement</span>
             <h3>Dina Nejar</h3>
@@ -205,10 +227,10 @@
           </div>
           <div class="presence" data-reveal style="--d:140ms">
             <figure class="media media--square" style="margin-bottom:1.6rem" data-reveal="image">
+              <!-- Placeholder visuel — remplacer par la vraie photo : tispora-portrait -->
               <div class="media__scene scene-portrait-2"></div>
               <div class="media__grain"></div>
               <div class="media__vignette"></div>
-              <figcaption class="media__caption">tispora-portrait</figcaption>
             </figure>
             <span class="presence__role">Accueil &amp; organisation</span>
             <h3>Tispora</h3>
@@ -258,6 +280,7 @@
           <h4>Prendre contact</h4>
           <ul>
             <li><a href="contact.html">Premier échange gratuit</a></li>
+            <li><a href="tel:+33627175059">06&nbsp;27&nbsp;17&nbsp;50&nbsp;59</a></li>
             <li><span class="muted">Yerres (Essonne)</span></li>
             <li><span class="muted">Séances à distance</span></li>
             <li><span class="muted">Confidentiel &amp; sans jugement</span></li>

@@ -9,3 +9,5 @@ Thumbs.db
 # Dependencies / build (none for this static site, kept for safety)
 node_modules/
 .vercel
+
+.vercel
